@@ -37,19 +37,19 @@
                                 <rect key="frame" x="20" y="184" width="560" height="50"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="yiY-Rh-qoE"/>
+                                    <constraint firstAttribute="height" constant="80" id="IN3-1g-0eK"/>
                                 </constraints>
                                 <color key="textColor" white="0.84584731543624159" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="yiY-Rh-qoE"/>
+                                        <exclude reference="IN3-1g-0eK"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <include reference="yiY-Rh-qoE"/>
+                                        <include reference="IN3-1g-0eK"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -60,19 +60,19 @@
                                 <rect key="frame" x="20" y="290" width="560" height="50"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="UGR-ar-94l"/>
+                                    <constraint firstAttribute="height" constant="80" id="Al5-4W-frG"/>
                                 </constraints>
                                 <color key="textColor" white="0.84584731543624159" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="UGR-ar-94l"/>
+                                        <exclude reference="Al5-4W-frG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <include reference="UGR-ar-94l"/>
+                                        <include reference="Al5-4W-frG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
@@ -113,7 +113,9 @@
                                 <color key="backgroundColor" red="0.18824075153433162" green="0.46439351581361454" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="c7n-zG-aZL"/>
-                                    <constraint firstAttribute="width" constant="347" id="tDL-Hc-3yn"/>
+                                    <constraint firstAttribute="width" constant="347" id="tDL-Hc-3yn">
+                                        <variation key="heightClass=regular" constant="436"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,7 +133,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Aad-VL-oDC" kind="presentation" id="Udb-iA-hiV"/>
+                                    <segue destination="Aad-VL-oDC" kind="presentation" animates="NO" id="Udb-iA-hiV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-As-iCd" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
@@ -139,7 +141,9 @@
                                 <color key="backgroundColor" red="0.1882407515" green="0.46439351579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="KS2-6X-ZOh"/>
-                                    <constraint firstAttribute="width" constant="347" id="Tww-23-Cj3"/>
+                                    <constraint firstAttribute="width" constant="347" id="Tww-23-Cj3">
+                                        <variation key="heightClass=regular" constant="436"/>
+                                    </constraint>
                                 </constraints>
                                 <state key="normal" title="Add Coursework">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -160,20 +164,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zIZ-6y-X2a" firstAttribute="centerX" secondItem="cW7-tn-mEr" secondAttribute="centerX" id="2Yu-u0-4Ma"/>
-                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="trailing" constant="22" id="88n-MP-kP4">
-                                <variation key="heightClass=regular" constant="8"/>
-                            </constraint>
+                            <constraint firstItem="wXy-jA-jih" firstAttribute="top" secondItem="cW7-tn-mEr" secondAttribute="bottom" constant="42" id="2dD-wd-yUV"/>
                             <constraint firstItem="w8H-As-iCd" firstAttribute="leading" secondItem="zIZ-6y-X2a" secondAttribute="leading" id="Buy-Uq-NWL"/>
-                            <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="MU2-64-66p"/>
-                            <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="leading" id="MkL-Cb-W6u"/>
-                            <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="Qph-QX-Sln"/>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="60" id="EWZ-uv-N2V"/>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="0Fr-ZN-5NN" secondAttribute="trailing" id="OBw-uN-oLI"/>
+                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="top" secondItem="cW7-tn-mEr" secondAttribute="bottom" constant="12" id="QYS-zK-gI8">
+                                <variation key="heightClass=regular" constant="42"/>
+                            </constraint>
                             <constraint firstItem="w8H-As-iCd" firstAttribute="top" secondItem="zIZ-6y-X2a" secondAttribute="bottom" constant="23" id="SNz-LS-Zrc"/>
-                            <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="0Fr-ZN-5NN" secondAttribute="trailing" id="b0X-1K-M4g"/>
-                            <constraint firstItem="cW7-tn-mEr" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="60" id="jgN-Rh-vbb"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="zIZ-6y-X2a" secondAttribute="bottom" constant="306" id="mD9-Y0-Kaa"/>
-                            <constraint firstItem="wXy-jA-jih" firstAttribute="centerY" secondItem="0Fr-ZN-5NN" secondAttribute="centerY" id="pPN-Oc-1Wv"/>
-                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="top" secondItem="cW7-tn-mEr" secondAttribute="bottom" constant="42" id="sqP-wL-fVg"/>
+                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="trailing" constant="8" symbolic="YES" id="XRf-jn-k36"/>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="cit-ai-Ufc"/>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="centerX" secondItem="zIZ-6y-X2a" secondAttribute="centerX" id="iGK-cp-rlq"/>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="kq5-bV-Xz2"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="zIZ-6y-X2a" secondAttribute="bottom" constant="306" id="mD9-Y0-Kaa">
+                                <variation key="heightClass=regular" constant="209"/>
+                            </constraint>
+                            <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="leading" id="zLI-Nd-hov"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -182,15 +188,15 @@
                                 <exclude reference="w8H-As-iCd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="MU2-64-66p"/>
-                                <exclude reference="MkL-Cb-W6u"/>
-                                <exclude reference="Qph-QX-Sln"/>
-                                <exclude reference="b0X-1K-M4g"/>
-                                <exclude reference="jgN-Rh-vbb"/>
-                                <exclude reference="pPN-Oc-1Wv"/>
-                                <exclude reference="88n-MP-kP4"/>
-                                <exclude reference="sqP-wL-fVg"/>
-                                <exclude reference="2Yu-u0-4Ma"/>
+                                <exclude reference="EWZ-uv-N2V"/>
+                                <exclude reference="OBw-uN-oLI"/>
+                                <exclude reference="cit-ai-Ufc"/>
+                                <exclude reference="iGK-cp-rlq"/>
+                                <exclude reference="kq5-bV-Xz2"/>
+                                <exclude reference="zLI-Nd-hov"/>
+                                <exclude reference="2dD-wd-yUV"/>
+                                <exclude reference="QYS-zK-gI8"/>
+                                <exclude reference="XRf-jn-k36"/>
                                 <exclude reference="Buy-Uq-NWL"/>
                                 <exclude reference="SNz-LS-Zrc"/>
                                 <exclude reference="mD9-Y0-Kaa"/>
@@ -203,15 +209,15 @@
                                 <include reference="w8H-As-iCd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="MU2-64-66p"/>
-                                <include reference="MkL-Cb-W6u"/>
-                                <include reference="Qph-QX-Sln"/>
-                                <include reference="b0X-1K-M4g"/>
-                                <include reference="jgN-Rh-vbb"/>
-                                <include reference="pPN-Oc-1Wv"/>
-                                <include reference="88n-MP-kP4"/>
-                                <include reference="sqP-wL-fVg"/>
-                                <include reference="2Yu-u0-4Ma"/>
+                                <include reference="EWZ-uv-N2V"/>
+                                <include reference="OBw-uN-oLI"/>
+                                <include reference="cit-ai-Ufc"/>
+                                <include reference="iGK-cp-rlq"/>
+                                <include reference="kq5-bV-Xz2"/>
+                                <include reference="zLI-Nd-hov"/>
+                                <include reference="2dD-wd-yUV"/>
+                                <include reference="QYS-zK-gI8"/>
+                                <include reference="XRf-jn-k36"/>
                                 <include reference="Buy-Uq-NWL"/>
                                 <include reference="SNz-LS-Zrc"/>
                                 <include reference="mD9-Y0-Kaa"/>
@@ -222,7 +228,7 @@
                     <navigationItem key="navigationItem" title="Edit Module" id="mOI-FS-AaM">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="cancel" id="d4d-fy-qOa">
                             <connections>
-                                <segue destination="Aad-VL-oDC" kind="presentation" id="yz8-xn-3Q7"/>
+                                <segue destination="Aad-VL-oDC" kind="presentation" animates="NO" id="yz8-xn-3Q7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -261,19 +267,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H1p-Uh-vWS" kind="presentation" id="qwS-ra-lUG"/>
+                                    <segue destination="H1p-Uh-vWS" kind="presentation" id="DBr-1s-S9U"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-Od-Eyj" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
-                                <rect key="frame" x="100" y="202" width="400" height="65"/>
-                                <color key="backgroundColor" red="1" green="0.29966682659999999" blue="0.40928345090000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="Kch-wM-0Du"/>
-                                    <constraint firstAttribute="height" constant="65" id="u31-NR-h6S"/>
-                                </constraints>
-                                <state key="normal" title="Add Coursework">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myb-eO-Skd" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
                                 <rect key="frame" x="100" y="267" width="400" height="65"/>
@@ -308,6 +303,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-Od-Eyj" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
+                                <rect key="frame" x="100" y="202" width="400" height="65"/>
+                                <color key="backgroundColor" red="1" green="0.29966682659999999" blue="0.40928345090000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Kch-wM-0Du"/>
+                                    <constraint firstAttribute="height" constant="65" id="u31-NR-h6S"/>
+                                </constraints>
+                                <state key="normal" title="Add Coursework">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -330,6 +336,7 @@
                             <constraint firstItem="ulj-Od-Eyj" firstAttribute="leading" secondItem="mSj-MR-ZuG" secondAttribute="leadingMargin" constant="80" id="tYy-xs-bVp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XAy-xb-YHp"/>
                     <connections>
                         <outlet property="btnAddCourse" destination="NGH-kf-hy9" id="rJF-js-Egn"/>
                         <outlet property="btnButton2" destination="ulj-Od-Eyj" id="L09-Iq-fEC"/>
@@ -365,6 +372,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.19215686269999999" green="0.19215686269999999" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
