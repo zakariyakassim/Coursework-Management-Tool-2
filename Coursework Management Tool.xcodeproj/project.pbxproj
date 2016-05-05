@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5270F19A1C9F64A2003A8E7D /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270F1991C9F64A2003A8E7D /* Module.swift */; };
+		529079421CB691A900CA9ECA /* ViewControllerMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529079411CB691A900CA9ECA /* ViewControllerMainMenu.swift */; };
 		529631FA1C9F4FCB0059415B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529631F91C9F4FCB0059415B /* AppDelegate.swift */; };
 		529631FC1C9F4FCB0059415B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529631FB1C9F4FCB0059415B /* MasterViewController.swift */; };
 		529631FE1C9F4FCB0059415B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529631FD1C9F4FCB0059415B /* DetailViewController.swift */; };
@@ -15,6 +17,9 @@
 		529632061C9F4FCB0059415B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529632041C9F4FCB0059415B /* LaunchScreen.storyboard */; };
 		529632111C9F4FCB0059415B /* Coursework_Management_ToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529632101C9F4FCB0059415B /* Coursework_Management_ToolTests.swift */; };
 		5296321C1C9F4FCB0059415B /* Coursework_Management_ToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296321B1C9F4FCB0059415B /* Coursework_Management_ToolUITests.swift */; };
+		E55E11FD1CDA76F500046C76 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E11FC1CDA76F500046C76 /* MyButton.swift */; };
+		E55E11FF1CDAC61700046C76 /* calculatorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E55E11FE1CDAC61700046C76 /* calculatorlogo.png */; };
+		E55E12011CDADEB600046C76 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E12001CDADEB600046C76 /* MyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5270F1991C9F64A2003A8E7D /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		529079411CB691A900CA9ECA /* ViewControllerMainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMainMenu.swift; sourceTree = "<group>"; };
 		529631F61C9F4FCB0059415B /* Coursework Management Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coursework Management Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		529631F91C9F4FCB0059415B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529631FB1C9F4FCB0059415B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,9 @@
 		529632171C9F4FCB0059415B /* Coursework Management ToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coursework Management ToolUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5296321B1C9F4FCB0059415B /* Coursework_Management_ToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coursework_Management_ToolUITests.swift; sourceTree = "<group>"; };
 		5296321D1C9F4FCB0059415B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E55E11FC1CDA76F500046C76 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		E55E11FE1CDAC61700046C76 /* calculatorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculatorlogo.png; sourceTree = "<group>"; };
+		E55E12001CDADEB600046C76 /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		529631F81C9F4FCB0059415B /* Coursework Management Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E55E11FC1CDA76F500046C76 /* MyButton.swift */,
 				529631F91C9F4FCB0059415B /* AppDelegate.swift */,
 				529631FB1C9F4FCB0059415B /* MasterViewController.swift */,
 				529631FD1C9F4FCB0059415B /* DetailViewController.swift */,
@@ -106,6 +117,10 @@
 				529632021C9F4FCB0059415B /* Assets.xcassets */,
 				529632041C9F4FCB0059415B /* LaunchScreen.storyboard */,
 				529632071C9F4FCB0059415B /* Info.plist */,
+				E55E11FE1CDAC61700046C76 /* calculatorlogo.png */,
+				5270F1991C9F64A2003A8E7D /* Module.swift */,
+				529079411CB691A900CA9ECA /* ViewControllerMainMenu.swift */,
+				E55E12001CDADEB600046C76 /* MyTextField.swift */,
 			);
 			path = "Coursework Management Tool";
 			sourceTree = "<group>";
@@ -235,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55E11FF1CDAC61700046C76 /* calculatorlogo.png in Resources */,
 				529632061C9F4FCB0059415B /* LaunchScreen.storyboard in Resources */,
 				529632031C9F4FCB0059415B /* Assets.xcassets in Resources */,
 				529632011C9F4FCB0059415B /* Main.storyboard in Resources */,
@@ -262,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5270F19A1C9F64A2003A8E7D /* Module.swift in Sources */,
+				E55E12011CDADEB600046C76 /* MyTextField.swift in Sources */,
 				529631FE1C9F4FCB0059415B /* DetailViewController.swift in Sources */,
 				529631FC1C9F4FCB0059415B /* MasterViewController.swift in Sources */,
+				529079421CB691A900CA9ECA /* ViewControllerMainMenu.swift in Sources */,
 				529631FA1C9F4FCB0059415B /* AppDelegate.swift in Sources */,
+				E55E11FD1CDA76F500046C76 /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +426,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Coursework Management Tool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zak.Coursework-Management-Tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,10 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Coursework Management Tool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "zak.Coursework-Management-Tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -491,6 +517,7 @@
 				529632221C9F4FCB0059415B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529632231C9F4FCB0059415B /* Build configuration list for PBXNativeTarget "Coursework Management ToolTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +526,7 @@
 				529632251C9F4FCB0059415B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529632261C9F4FCB0059415B /* Build configuration list for PBXNativeTarget "Coursework Management ToolUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +535,7 @@
 				529632281C9F4FCB0059415B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,12 +8,20 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var levelPickerView: UIPickerView!
+    var placeHolderData: String!
+    
+   var levels = ["Level 4", "Level 5", "Level 6", "Level 7"];
 
 
-    var detailItem: AnyObject? {
+    @IBOutlet weak var txtModule: UITextField!
+    
+
+    @IBOutlet weak var txtCode: UITextField!
+
+    var detailItem: Module? {
         didSet {
             // Update the view.
             self.configureView()
@@ -23,18 +31,55 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+            if let name = self.txtModule {
+                name.text = detail.name
+                
+            }
+            if let code = self.txtCode {
+                code.text = detail.code
             }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.customTextFieldStyle(txtModule, text: "Module Name")
+                self.customTextFieldStyle(txtCode, text: "Module Code")
+
+
+        levelPickerView.delegate = self
+        levelPickerView.dataSource = self
+        
         self.configureView()
     }
+    
+    
+    func customTextFieldStyle(textField: UITextField, text: String) {
+        
+        textField.backgroundColor = UIColor.clearColor()
+        textField.attributedPlaceholder = NSAttributedString(string: text,
+                                                               attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        textField.layer.cornerRadius = 8;
+        textField.layer.borderWidth = 2;
+        textField.layer.borderColor = UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00).CGColor
+        
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return levels.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return levels[row]
+    }
 
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
