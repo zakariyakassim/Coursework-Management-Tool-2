@@ -86,7 +86,9 @@
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="36V-aw-QV0"/>
+                                    <constraint firstAttribute="width" constant="165" id="36V-aw-QV0">
+                                        <variation key="heightClass=regular" constant="179"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="80" id="J70-kX-EBJ"/>
                                 </constraints>
                                 <variation key="default">
@@ -106,21 +108,78 @@
                                     <outlet property="delegate" destination="svH-Pt-448" id="rvw-3S-OWh"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIZ-6y-X2a" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.18824075153433162" green="0.46439351581361454" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="c7n-zG-aZL"/>
+                                    <constraint firstAttribute="width" constant="347" id="tDL-Hc-3yn"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c7n-zG-aZL"/>
+                                        <exclude reference="tDL-Hc-3yn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="c7n-zG-aZL"/>
+                                        <include reference="tDL-Hc-3yn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="Aad-VL-oDC" kind="presentation" id="Udb-iA-hiV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-As-iCd" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1882407515" green="0.46439351579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="KS2-6X-ZOh"/>
+                                    <constraint firstAttribute="width" constant="347" id="Tww-23-Cj3"/>
+                                </constraints>
+                                <state key="normal" title="Add Coursework">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KS2-6X-ZOh"/>
+                                        <exclude reference="Tww-23-Cj3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="KS2-6X-ZOh"/>
+                                        <include reference="Tww-23-Cj3"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="trailing" constant="22" id="88n-MP-kP4"/>
+                            <constraint firstItem="zIZ-6y-X2a" firstAttribute="centerX" secondItem="cW7-tn-mEr" secondAttribute="centerX" id="2Yu-u0-4Ma"/>
+                            <constraint firstItem="0Fr-ZN-5NN" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="trailing" constant="22" id="88n-MP-kP4">
+                                <variation key="heightClass=regular" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="w8H-As-iCd" firstAttribute="leading" secondItem="zIZ-6y-X2a" secondAttribute="leading" id="Buy-Uq-NWL"/>
                             <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="MU2-64-66p"/>
                             <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="wXy-jA-jih" secondAttribute="leading" id="MkL-Cb-W6u"/>
                             <constraint firstItem="cW7-tn-mEr" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="Qph-QX-Sln"/>
+                            <constraint firstItem="w8H-As-iCd" firstAttribute="top" secondItem="zIZ-6y-X2a" secondAttribute="bottom" constant="23" id="SNz-LS-Zrc"/>
                             <constraint firstItem="cW7-tn-mEr" firstAttribute="trailing" secondItem="0Fr-ZN-5NN" secondAttribute="trailing" id="b0X-1K-M4g"/>
                             <constraint firstItem="cW7-tn-mEr" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="60" id="jgN-Rh-vbb"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="zIZ-6y-X2a" secondAttribute="bottom" constant="306" id="mD9-Y0-Kaa"/>
                             <constraint firstItem="wXy-jA-jih" firstAttribute="centerY" secondItem="0Fr-ZN-5NN" secondAttribute="centerY" id="pPN-Oc-1Wv"/>
                             <constraint firstItem="0Fr-ZN-5NN" firstAttribute="top" secondItem="cW7-tn-mEr" secondAttribute="bottom" constant="42" id="sqP-wL-fVg"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="0Fr-ZN-5NN"/>
+                                <exclude reference="zIZ-6y-X2a"/>
+                                <exclude reference="w8H-As-iCd"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MU2-64-66p"/>
@@ -131,11 +190,17 @@
                                 <exclude reference="pPN-Oc-1Wv"/>
                                 <exclude reference="88n-MP-kP4"/>
                                 <exclude reference="sqP-wL-fVg"/>
+                                <exclude reference="2Yu-u0-4Ma"/>
+                                <exclude reference="Buy-Uq-NWL"/>
+                                <exclude reference="SNz-LS-Zrc"/>
+                                <exclude reference="mD9-Y0-Kaa"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="0Fr-ZN-5NN"/>
+                                <include reference="zIZ-6y-X2a"/>
+                                <include reference="w8H-As-iCd"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MU2-64-66p"/>
@@ -146,6 +211,10 @@
                                 <include reference="pPN-Oc-1Wv"/>
                                 <include reference="88n-MP-kP4"/>
                                 <include reference="sqP-wL-fVg"/>
+                                <include reference="2Yu-u0-4Ma"/>
+                                <include reference="Buy-Uq-NWL"/>
+                                <include reference="SNz-LS-Zrc"/>
+                                <include reference="mD9-Y0-Kaa"/>
                             </mask>
                         </variation>
                     </view>
@@ -158,6 +227,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnAddCoursework" destination="w8H-As-iCd" id="i34-Mt-vBs"/>
+                        <outlet property="btnSave" destination="zIZ-6y-X2a" id="ZlR-Mb-4r3"/>
                         <outlet property="levelPickerView" destination="0Fr-ZN-5NN" id="C4g-pb-Q7C"/>
                         <outlet property="txtCode" destination="wXy-jA-jih" id="Th4-da-HH5"/>
                         <outlet property="txtModule" destination="cW7-tn-mEr" id="j1m-Rv-d1u"/>
@@ -165,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1468" y="453"/>
+            <point key="canvasLocation" x="-1466" y="445.5"/>
         </scene>
         <!--View Controller Main Menu-->
         <scene sceneID="gLa-rH-vYt">
@@ -346,6 +417,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="yz8-xn-3Q7"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

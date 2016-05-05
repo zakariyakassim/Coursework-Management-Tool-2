@@ -16,6 +16,8 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
    var levels = ["Level 4", "Level 5", "Level 6", "Level 7"];
 
 
+    @IBOutlet weak var btnAddCoursework: MyButton!
+    @IBOutlet weak var btnSave: MyButton!
     @IBOutlet weak var txtModule: UITextField!
     
 
@@ -46,10 +48,22 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         self.customTextFieldStyle(txtModule, text: "Module Name")
                 self.customTextFieldStyle(txtCode, text: "Module Code")
-
+self.levelPickerView.backgroundColor = UIColor.clearColor()
 
         levelPickerView.delegate = self
         levelPickerView.dataSource = self
+        
+        self.btnSave.backgroundColor = UIColor.clearColor()
+         self.btnAddCoursework.backgroundColor = UIColor.clearColor()
+        self.btnAddCoursework.setFillColor(UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00))
+        
+        self.btnAddCoursework.setRadius(15,setTopRight: 15,setBottomLeft: 15,setBottomRight: 15)
+        
+        self.btnSave.backgroundColor = UIColor.clearColor()
+                self.btnSave.setFillColor(UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00))
+        
+        self.btnSave.setRadius(15,setTopRight: 15,setBottomLeft: 15,setBottomRight: 15)
+        
         
         self.configureView()
     }
@@ -74,10 +88,20 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return levels.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return levels[row]
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var attributedString: NSAttributedString!
+        
+        
+            attributedString = NSAttributedString(string: levels[row], attributes: [NSForegroundColorAttributeName : UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00)])
+        
+        return attributedString
     }
 
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+            print(levels[row])
+        
+    }
 
     
     override func didReceiveMemoryWarning() {
