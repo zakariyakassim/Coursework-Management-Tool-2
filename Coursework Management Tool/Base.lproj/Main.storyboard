@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aad-VL-oDC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aad-VL-oDC">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Module Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-tn-mEr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Module Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-tn-mEr">
                                 <rect key="frame" x="20" y="184" width="560" height="50"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -56,7 +56,7 @@
                                     <rect key="frame" x="211" y="184" width="408" height="230"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Module Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXy-jA-jih">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Module Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXy-jA-jih">
                                 <rect key="frame" x="20" y="290" width="560" height="50"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -78,9 +78,6 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="211" y="184" width="408" height="230"/>
                                 </variation>
-                                <connections>
-                                    <action selector="textViewDidBeginEditing:" destination="JEX-9P-axG" eventType="editingDidBegin" id="FKS-cA-9GO"/>
-                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-ZN-5NN">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
@@ -108,6 +105,34 @@
                                     <outlet property="delegate" destination="svH-Pt-448" id="rvw-3S-OWh"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-As-iCd" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1882407515" green="0.46439351579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="KS2-6X-ZOh"/>
+                                    <constraint firstAttribute="width" constant="347" id="Tww-23-Cj3">
+                                        <variation key="heightClass=regular" constant="436"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Add Coursework">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KS2-6X-ZOh"/>
+                                        <exclude reference="Tww-23-Cj3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="KS2-6X-ZOh"/>
+                                        <include reference="Tww-23-Cj3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="btnFetch:" destination="JEX-9P-axG" eventType="touchUpInside" id="bzW-4s-TWK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIZ-6y-X2a" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.18824075153433162" green="0.46439351581361454" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,33 +158,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Aad-VL-oDC" kind="presentation" animates="NO" id="Udb-iA-hiV"/>
+                                    <action selector="btnSave:" destination="JEX-9P-axG" eventType="touchUpInside" id="I75-6U-FcV"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-As-iCd" customClass="MyButton" customModule="Coursework_Management_Tool" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.1882407515" green="0.46439351579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="KS2-6X-ZOh"/>
-                                    <constraint firstAttribute="width" constant="347" id="Tww-23-Cj3">
-                                        <variation key="heightClass=regular" constant="436"/>
-                                    </constraint>
-                                </constraints>
-                                <state key="normal" title="Add Coursework">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KS2-6X-ZOh"/>
-                                        <exclude reference="Tww-23-Cj3"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="KS2-6X-ZOh"/>
-                                        <include reference="Tww-23-Cj3"/>
-                                    </mask>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -184,10 +184,14 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="0Fr-ZN-5NN"/>
-                                <exclude reference="zIZ-6y-X2a"/>
                                 <exclude reference="w8H-As-iCd"/>
+                                <exclude reference="zIZ-6y-X2a"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="QYS-zK-gI8"/>
+                                <exclude reference="XRf-jn-k36"/>
+                                <exclude reference="Buy-Uq-NWL"/>
+                                <exclude reference="SNz-LS-Zrc"/>
                                 <exclude reference="EWZ-uv-N2V"/>
                                 <exclude reference="OBw-uN-oLI"/>
                                 <exclude reference="cit-ai-Ufc"/>
@@ -195,20 +199,20 @@
                                 <exclude reference="kq5-bV-Xz2"/>
                                 <exclude reference="zLI-Nd-hov"/>
                                 <exclude reference="2dD-wd-yUV"/>
-                                <exclude reference="QYS-zK-gI8"/>
-                                <exclude reference="XRf-jn-k36"/>
-                                <exclude reference="Buy-Uq-NWL"/>
-                                <exclude reference="SNz-LS-Zrc"/>
                                 <exclude reference="mD9-Y0-Kaa"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="0Fr-ZN-5NN"/>
-                                <include reference="zIZ-6y-X2a"/>
                                 <include reference="w8H-As-iCd"/>
+                                <include reference="zIZ-6y-X2a"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="QYS-zK-gI8"/>
+                                <include reference="XRf-jn-k36"/>
+                                <include reference="Buy-Uq-NWL"/>
+                                <include reference="SNz-LS-Zrc"/>
                                 <include reference="EWZ-uv-N2V"/>
                                 <include reference="OBw-uN-oLI"/>
                                 <include reference="cit-ai-Ufc"/>
@@ -216,10 +220,6 @@
                                 <include reference="kq5-bV-Xz2"/>
                                 <include reference="zLI-Nd-hov"/>
                                 <include reference="2dD-wd-yUV"/>
-                                <include reference="QYS-zK-gI8"/>
-                                <include reference="XRf-jn-k36"/>
-                                <include reference="Buy-Uq-NWL"/>
-                                <include reference="SNz-LS-Zrc"/>
                                 <include reference="mD9-Y0-Kaa"/>
                             </mask>
                         </variation>
@@ -425,7 +425,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yz8-xn-3Q7"/>
         <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

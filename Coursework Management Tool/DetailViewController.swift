@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-  
+   // var module_data = [NSManagedObject]()
     
     var placeHolderData: String!
     var levels = ["Level 4", "Level 5", "Level 6", "Level 7"];
     
+    var dataController = DataController()
     
     @IBOutlet weak var btnAddCoursework: MyButton!
     @IBOutlet weak var btnSave: MyButton!
@@ -22,6 +24,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var txtCode: UITextField!
     @IBOutlet weak var levelPickerView: UIPickerView!
     
+    var selectedLevel: String!
+    var position: Int?
+    
+    var table: UITableView?
+    var modules = [Module]()
     
     var detailItem: Module? {
         didSet {
@@ -32,12 +39,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func configureView() {
         // Update the user interface for the detail item.
+        
         if let detail = self.detailItem {
             if let name = self.txtModule {
                 name.text = detail.name
             }
             if let code = self.txtCode {
-                code.text = detail.code
+                code.text = String(position)
             }
         }
     }
@@ -46,8 +54,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         
         self.customTextFieldStyle(txtModule, text: "Module Name")
-        self.customTextFieldStyle(txtCode, text: "Module Code")
-        
+        self.customTextFieldStyle(txtCode, text: String(position))
         
         self.levelPickerView.backgroundColor = UIColor.clearColor()
         self.levelPickerView.delegate = self
@@ -58,13 +65,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.btnSave.setFillColor(UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00))
         self.btnSave.setRadius(15,setTopRight: 15,setBottomLeft: 15,setBottomRight: 15)
         
-        
         self.btnAddCoursework.backgroundColor = UIColor.clearColor()
         self.btnAddCoursework.setFillColor(UIColor(red: 0.165, green:0.427, blue:0.620, alpha:1.00))
         self.btnAddCoursework.setRadius(15,setTopRight: 15,setBottomLeft: 15,setBottomRight: 15)
         
-    
+        selectedLevel = "Level 4"
         
+      
         
         self.configureView()
     }
@@ -104,6 +111,31 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         print(levels[row])
         
+        selectedLevel = levels[row]
+        
+    }
+    
+    
+    @IBAction func btnSave(sender: MyButton) {
+        
+        if txtModule.text != "" {
+            
+            if dataController.fetchModules().contains(txtModule.text!){
+                print("Already exist")
+
+            }else{
+               dataController.addModule(txtModule.text!, code: txtModule.text!, level: selectedLevel)
+            
+
+            }
+            
+            modules = dataController.fetchAll()
+            table?.reloadData()
+            
+        }else{
+            print("Empty")
+        }
+        
     }
     
     
@@ -111,6 +143,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
 }

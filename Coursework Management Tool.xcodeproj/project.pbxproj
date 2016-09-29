@@ -20,6 +20,10 @@
 		E55E11FD1CDA76F500046C76 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E11FC1CDA76F500046C76 /* MyButton.swift */; };
 		E55E11FF1CDAC61700046C76 /* calculatorlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E55E11FE1CDAC61700046C76 /* calculatorlogo.png */; };
 		E55E12011CDADEB600046C76 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55E12001CDADEB600046C76 /* MyTextField.swift */; };
+		E57932CF1CDB806000429C10 /* MyCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E57932CD1CDB806000429C10 /* MyCoreData.xcdatamodeld */; };
+		E57932DC1CDB8D1800429C10 /* ModuleData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57932DA1CDB8D1800429C10 /* ModuleData+CoreDataProperties.swift */; };
+		E57932DD1CDB8D1800429C10 /* ModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57932DB1CDB8D1800429C10 /* ModuleData.swift */; };
+		E57932DF1CDB8D6400429C10 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57932DE1CDB8D6400429C10 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		E55E11FC1CDA76F500046C76 /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		E55E11FE1CDAC61700046C76 /* calculatorlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculatorlogo.png; sourceTree = "<group>"; };
 		E55E12001CDADEB600046C76 /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		E57932CE1CDB806000429C10 /* MyCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCoreData.xcdatamodel; sourceTree = "<group>"; };
+		E57932DA1CDB8D1800429C10 /* ModuleData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModuleData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E57932DB1CDB8D1800429C10 /* ModuleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleData.swift; sourceTree = "<group>"; };
+		E57932DE1CDB8D6400429C10 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,8 @@
 		529631ED1C9F4FCA0059415B = {
 			isa = PBXGroup;
 			children = (
+				E57932DA1CDB8D1800429C10 /* ModuleData+CoreDataProperties.swift */,
+				E57932DB1CDB8D1800429C10 /* ModuleData.swift */,
 				529631F81C9F4FCB0059415B /* Coursework Management Tool */,
 				5296320F1C9F4FCB0059415B /* Coursework Management ToolTests */,
 				5296321A1C9F4FCB0059415B /* Coursework Management ToolUITests */,
@@ -109,6 +119,7 @@
 		529631F81C9F4FCB0059415B /* Coursework Management Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E57932DE1CDB8D6400429C10 /* DataController.swift */,
 				E55E11FC1CDA76F500046C76 /* MyButton.swift */,
 				529631F91C9F4FCB0059415B /* AppDelegate.swift */,
 				529631FB1C9F4FCB0059415B /* MasterViewController.swift */,
@@ -121,6 +132,7 @@
 				5270F1991C9F64A2003A8E7D /* Module.swift */,
 				529079411CB691A900CA9ECA /* ViewControllerMainMenu.swift */,
 				E55E12001CDADEB600046C76 /* MyTextField.swift */,
+				E57932CD1CDB806000429C10 /* MyCoreData.xcdatamodeld */,
 			);
 			path = "Coursework Management Tool";
 			sourceTree = "<group>";
@@ -279,11 +291,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270F19A1C9F64A2003A8E7D /* Module.swift in Sources */,
+				E57932DD1CDB8D1800429C10 /* ModuleData.swift in Sources */,
 				E55E12011CDADEB600046C76 /* MyTextField.swift in Sources */,
 				529631FE1C9F4FCB0059415B /* DetailViewController.swift in Sources */,
 				529631FC1C9F4FCB0059415B /* MasterViewController.swift in Sources */,
+				E57932DF1CDB8D6400429C10 /* DataController.swift in Sources */,
 				529079421CB691A900CA9ECA /* ViewControllerMainMenu.swift in Sources */,
+				E57932CF1CDB806000429C10 /* MyCoreData.xcdatamodeld in Sources */,
 				529631FA1C9F4FCB0059415B /* AppDelegate.swift in Sources */,
+				E57932DC1CDB8D1800429C10 /* ModuleData+CoreDataProperties.swift in Sources */,
 				E55E11FD1CDA76F500046C76 /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +554,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E57932CD1CDB806000429C10 /* MyCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E57932CE1CDB806000429C10 /* MyCoreData.xcdatamodel */,
+			);
+			currentVersion = E57932CE1CDB806000429C10 /* MyCoreData.xcdatamodel */;
+			path = MyCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 529631EE1C9F4FCB0059415B /* Project object */;
 }
